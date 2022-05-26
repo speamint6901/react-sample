@@ -1,7 +1,11 @@
 import styled from "styled-components";
+import React, { useContext } from "react";
+import { UserContext } from "../../../providers/UserProvider";
 
 export const UserIconWithName = (props) => {
   const { image, name } = props;
+  const context = useContext(UserContext);
+  console.log(context);
   return (
     <SContainer>
       <SImg width={160} height={160} alt={name} src={image} />
